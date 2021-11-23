@@ -35,7 +35,7 @@ jobs:
       - name: Step 3 - Let Github Actions Build Demo Maven Project
         run: 
           mvn -B package --file pom.xml
-          mkdir staging && cp target /*.jar staging
+          mkdir staging && cp target/*.jar staging
 
       - name: Step 3.5 Whats in the directory?
         run: ls -a
