@@ -35,6 +35,9 @@ jobs:
       - name: Step 3 - Let Github Actions Build Demo Maven Project
         run: mvn -B package --file pom.xml
 
+      - name: Step 3.5 Whats in the directory?
+        run: ls -a
+        
       - name: Step 4 - What is in the target folder?
         run:
           cd target
