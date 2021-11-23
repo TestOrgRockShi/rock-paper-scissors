@@ -35,10 +35,8 @@ jobs:
       - name: Step 3 - Let Github Actions Build Demo Maven Project
         run: 
           mvn -B package --file pom.xml
-
-      - name: Step 4 - Changing to target folder
-        run:
-          cd target
           
-      - name: Step 5 - Checking to make sure Jar file exists
-        run: ls -a
+      - name: Step 4 - Checking to make sure Jar file exists
+        run: |
+          cd target
+          ls -a
