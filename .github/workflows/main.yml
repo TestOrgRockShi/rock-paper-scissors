@@ -36,9 +36,9 @@ jobs:
         run: 
           mvn -B package --file pom.xml
 
-      - name: Step 3.5 Whats in the directory?
-        run: ls -a
-        
-      - name: Step 4 - What is in the target folder?
+      - name: Step 4 - Changing to target folder
         run:
           cd target
+          
+      - name: Step 5 - Checking to make sure Jar file exists
+        run: ls -a
