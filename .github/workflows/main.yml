@@ -44,8 +44,7 @@ jobs:
       - name: Step 5 - Sending file to Azure SA Junction App
         uses: bacongobbler/azure-blob-storage-upload@v1.2.0
         with:
-          source_dir: target
-          paths: '*.jar'
+          source_dir: 'roshambo-0.0.1-SNAPSHOT.jar'
           container_name: junction-app
           connection_string: ${{ secrets.ConnectionString }}
           sync: true
