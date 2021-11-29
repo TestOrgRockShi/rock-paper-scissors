@@ -40,3 +40,11 @@ jobs:
         run: |
           cd target
           ls -a
+          
+      - name: Step 5 - Sending file to Azure SA Junction App
+        uses: bacongobbler/azure-blob-storage-upload@v1.2.0
+        with:
+          source_dir: target
+          container_name: junction-app
+          connection_string: ${{ secrets.ConnectionString }}
+          sync: true
