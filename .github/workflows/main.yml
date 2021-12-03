@@ -19,6 +19,9 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    environment: TestENV
+    env:
+      AZURE_CONNECTIONSTRING: ${{secrets.AZURE_CONNECTIONSTRING}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -47,5 +50,5 @@ jobs:
         with:
           source_dir: staging
           container_name: junction-app
-          connection_string: ${{ secrets.ConnectionString }}
+          connection_string: ${{ env.AZURE_CONNECTIONSTRING }}
           sync: true
