@@ -50,5 +50,5 @@ jobs:
         with:
           source_dir: staging
           container_name: junction-app
-          connection_string: '${{ secrets.AZURE_CONNECTIONSTRING}}'
+          connection_string: $AZURE_CONNECTIONSTRING
           sync: true
